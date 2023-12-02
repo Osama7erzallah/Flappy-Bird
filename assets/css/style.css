@@ -1,0 +1,90 @@
+/* Globals  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables  */
+:root {
+  --bg-color: rgb(0, 0, 0);
+  --bird-color: rgba(0, 0, 0, 0.296);
+  --obstacle-color: #000000;
+  color: ;
+}
+
+/* ============================== */
+body {
+  background-image: url(../img/background.jpg);
+    background-size:cover;
+  
+  }
+
+#game {
+  /* background-color: var(--bg-color); */
+  background-image: url(../img/11.jpg);
+    background-size: cover;
+  
+  width: 500px;
+  height: 500px;
+  border: 3px solid #fff;
+  margin: auto;
+  margin-top: 35px;
+  position: relative;
+  overflow: hidden;
+}
+
+#obstacle {
+  width: 50px;
+  height: 500px;
+
+  background-color: var(--obstacle-color);
+  background-image: url(../img/background.jpg);
+
+
+  position: absolute;
+  top: 0;
+  left: 100%;
+  animation: obstacle-anim 1.8s infinite linear;
+  z-index: 1;
+}
+
+#hole {
+  border-top: 2px solid #ffffff2b;
+  border-bottom: 2px solid #ffffff2b;
+  width: 50px;
+  height: 150px;
+  background-color: var(--bg-color);
+
+  position: absolute;
+  top: 150px;
+  left: 100%;
+  animation: obstacle-anim 1.8s infinite linear;
+  z-index: 2;
+  
+}
+
+@keyframes obstacle-anim {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -60px;
+  }
+}
+#bird img{
+  
+width: 25px;
+  height: 25px;
+   border-radius: 50%;
+  border: 2px solid #fff;
+}
+#bird {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 100px;
+  border-radius: 50%;
+ 
+  z-index: 3;
+}
